@@ -28,7 +28,7 @@ resource "aws_db_instance" "default" {
   auto_minor_version_upgrade          = var.auto_minor_version_upgrade
   engine                              = var.engine
   engine_version                      = var.engine_version
-  identifier                          = "${var.env}-${var.project_name}-${var.identifier}"
+  identifier                          = var.identifier
   instance_class                      = var.instance_class
   storage_type                        = var.storage_type
   iops                                = var.iops
