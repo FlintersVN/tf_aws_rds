@@ -277,7 +277,7 @@ variable "vpc_id" {
 }
 
 variable "subnet_ids" {
-  type        = string
+  type        = list(string)
   description = "VPC Subnet IDs the database instance is launched in"
 }
 
