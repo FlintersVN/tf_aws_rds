@@ -44,6 +44,6 @@ output "instance_endpoint" {
 }
 
 output "hostname" {
-  value       = aws_route53_record.default.name
+  value       = join("", aws_route53_record.default.*.name)
   description = "DNS host name of the instance"
 }
