@@ -4,12 +4,12 @@
 #--------------------------------------------------------------
 
 resource "aws_db_subnet_group" "default" {
-  name        = "${var.identifier}_subnet_group"
+  name        = "${var.identifier}-subnet-group"
   description = "Managed by Terraform"
   subnet_ids  = var.subnet_ids
   tags = merge(
     {
-      "Name" = "${var.identifier}_subnet_group"
+      "Name" = "${var.identifier}-subnet-group"
     },
     var.tags,
   )

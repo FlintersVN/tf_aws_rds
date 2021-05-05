@@ -2,7 +2,7 @@ resource "aws_security_group" "default" {
   lifecycle {
     create_before_destroy = true
   }
-  name        = "${var.identifier}_sg"
+  name        = "${var.identifier}-sg"
   description = "Managed by Terraform"
   vpc_id      = var.vpc_id
 
@@ -15,7 +15,7 @@ resource "aws_security_group" "default" {
 
   tags = merge(
     {
-      "Name" = "${var.identifier}_sg"
+      "Name" = "${var.identifier}-sg"
     },
     var.tags,
   )
