@@ -291,6 +291,12 @@ variable "allowed_ips" {
 
 # Route 53
 
+variable "zone_id" {
+  type        = string
+  default     = ""
+  description = "The ID of the DNS Zone in Route53 where a new DNS record will be created for the DB host name"
+}
+
 variable "ttl" {
   default     = 30
   type        = number
