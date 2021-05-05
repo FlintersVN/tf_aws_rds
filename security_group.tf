@@ -7,8 +7,8 @@ resource "aws_security_group" "default" {
   vpc_id      = var.vpc_id
 
   ingress {
-    from_port   = 5432
-    to_port     = 5432
+    from_port   = var.port
+    to_port     = var.port
     protocol    = "TCP"
     cidr_blocks = split(",", var.allowed_ips)
   }
